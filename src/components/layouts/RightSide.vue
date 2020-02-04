@@ -1,16 +1,18 @@
 <template lang="html">
   <div class="col-md-4 right-side" >
       <TableSize v-bind:key="tableSize.type" v-bind:tableType="tableSize" v-for="tableSize in tableSizes" />
-
+      <TableFrame/>
   </div>
 </template>
 
 <script>
 import TableSize from '../TableSize'
+import TableFrame from '../TableFrame'
 export default {
   name :"RightSide" ,
   components :{
-    TableSize
+    TableSize,
+    TableFrame
   },
   props :{
 
@@ -36,10 +38,10 @@ export default {
           {id : "4dinning_table_50x50" , label : "ROUND TABLE Ø80 CM" ,  price :  0},
         ]
       }
+    ]
 
-      ]
-    }
   }
+}
 }
 </script>
 
